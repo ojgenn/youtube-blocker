@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Example",
+    "description": "This extension allows filter StackOverflow questions.",
+    "version": "1.0",
+  
+    "browser_action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.min.html"
+    },
+    "permissions": [
+        "activeTab", 
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "background",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*", "https://www.youtube.com/*"],
+            "js": ["background.min.js"]
+        }
+    ]
+}
